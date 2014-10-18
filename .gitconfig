@@ -1,0 +1,77 @@
+[user]
+	name = Ben Paddock
+	email = pads@thisispads.me.uk	
+	
+[alias]
+	st = status
+	aa = add -all
+	ci = commit
+	ca = commit -a
+	cam = commit -a -m
+	rcam = commit -a --amend -m
+	rca = commit -a --amend
+	alc = commit --amend
+	co = checkout
+	cb = checkout -b
+	dlb = branch -d
+	db = branch -D
+	lb = branch --list
+	lba = branch -a
+	tb = branch --set-upstream
+	rb = branch -m
+	pcb = rev-parse --abbrev-ref HEAD
+	lt = tag -l
+	ct = tag -a
+	pt = push --tags
+	drb = push origin --delete
+	fom = fetch origin master
+	po = push origin
+	pom = push origin master
+	pall = push all --all
+	pu = push upstream
+	pum = pull origin master
+	prum = pull --rebase upstream master
+	pr = pull --rebase
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = rebase --skip
+	fu = fetch upstream
+	mum = merge upstream/master
+	srh = reset --soft HEAD^
+	hr = reset --hard
+	df = diff
+	ls = ls-files
+	startover = checkout -f
+	ptb = push --set-upstream origin
+	ifc = update-index --assume-unchanged
+	ld = log --
+	graph = log --oneline --abbrev-commit --all --graph --decorate --color
+	files = show --pretty="format:" --name-only
+[color]
+	ui = "true"
+		
+[color "status"]
+	added = magenta bold
+	changed = yellow bold
+	untracked = red bold
+	
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = white bold
+  
+[color "branch"]
+  current = green bold reverse
+  local = green 
+  remote = cyan	
+
+[merge]
+	stat = true
+		
+[core]
+	excludesfile = ~/.gitignore
+	whitespace = trailing-space,space-before-tab
+	editor = subl -w
+	autocrlf = input

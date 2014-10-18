@@ -1,0 +1,30 @@
+#
+# Compiled files
+#
+*.class
+*.pyc
+#
+# Intellij
+#
+.idea
+*.iml
+*.iws
+*.ipr
+#
+# Eclipse
+#
+.classpath
+.project
+.settings
+#
+# Misc
+#
+*~
+*.log
+.gradle
+bin
+out
+build
+dist
+gen
+.DS_Store
