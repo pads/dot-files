@@ -4,6 +4,7 @@ alias be="bundle exec"
 alias df="df -ih"
 alias sk="karma start --browsers PhantomJS --reporters progress,osx"
 alias pcb="echo $(git rev-parse --abbrev-ref HEAD)"
+alias pidport=pidOfPort
 
 # Git Customisation
 
@@ -23,6 +24,11 @@ complete -o default -o nospace -F _git g
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
 
 # Functions
+
+# Get the process ID behind the listening port
+function pidOfPort() {
+  lsof -ti tcp:$1
+}
 
 # Install a grunt plugin and save to devDependencies
 function gi() {
