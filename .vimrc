@@ -10,3 +10,4 @@ set hlsearch
 set showmatch
 set visualbell
 set noerrorbells
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
