@@ -13,6 +13,7 @@ source $GITAWAREPROMPT/main.sh
 export PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 alias git=hub
 alias g=git
+alias prune="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 complete -o default -o nospace -F _git g
 
 # Ruby Environment
