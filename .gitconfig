@@ -47,6 +47,7 @@
 	ld = log --
 	graph = log --oneline --abbrev-commit --all --graph --decorate --color
 	files = show --pretty="format:" --name-only
+	lmb = branch --merged
 [color]
 	ui = "true"
 		
