@@ -49,6 +49,8 @@ export PATH=$PATH:$HOME/development/useful-scripts
 export PATH=$PATH:$HOME/development/ec2-api-tools/bin
 export no_proxy=localhost
 
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
 # startup virtualenv-burrito
 if [ -f $HOME/.venvburrito/startup.sh ]; then
     . $HOME/.venvburrito/startup.sh
