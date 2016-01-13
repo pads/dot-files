@@ -2,6 +2,9 @@
 # User configuration sourced by interactive shells
 #
 
+autoload -U promptinit
+promptinit
+
 # Source zim
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
