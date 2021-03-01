@@ -42,6 +42,7 @@
 	df = diff
 	ls = ls-files
 	startover = checkout -f
+	unstage = reset HEAD --
 	ptb = push --set-upstream origin
 	ifc = update-index --assume-unchanged
 	ld = log --
@@ -78,3 +79,9 @@
 	whitespace = trailing-space,space-before-tab
 	editor = vim
 	autocrlf = input
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[push]
+	default = current
