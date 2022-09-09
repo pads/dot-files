@@ -32,6 +32,7 @@
 	pum = pull origin master
 	prum = pull --rebase upstream master
 	pr = pull --rebase
+	ram = rebase -i --autosquash origin/main
 	rc = rebase --continue
 	ra = rebase --abort
 	rs = rebase --skip
