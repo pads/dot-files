@@ -96,3 +96,4 @@
   	insteadOf = https://github.com/	
 [rebase]
 	autosquash = true
+	autostash = true
