@@ -10,4 +10,5 @@ set hlsearch
 set showmatch
 set visualbell
 set noerrorbells
+set backspace=indent,eol,start
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
