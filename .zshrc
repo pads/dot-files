@@ -2,7 +2,7 @@
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 #
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -53,11 +53,12 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+source /opt/homebrew/share/antigen/antigen.zsh
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws docker github history last-working-dir git-extras httpie node npm pip redis-cli sudo systemd)
+plugins=(git keychain gpg-agent aws docker github history last-working-dir git-extras httpie node pip redis-cli sudo systemd npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,3 +121,4 @@ awslookup() {
   eval $cmd
 }
 export awslookup
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -12,6 +12,7 @@
 	rca = commit -a --amend
 	alc = commit --amend
 	co = checkout
+	pb = checkout -
 	cb = checkout -b
 	dlb = branch -d
 	db = branch -D
@@ -52,6 +53,11 @@
 	lmb = branch --merged
 	sm = merge --no-commit --no-ff
 	am = merge --abort
+	bs = bisect start
+	bb = bisect bad
+	bg = bisect good
+	ow = checkout HEAD@{1.week.ago}
+	od = checkout HEAD@{1.day.ago}
 [color]
 	ui = "true"
 		
@@ -82,10 +88,12 @@
 	autocrlf = input
 [branch]
 	autosetuprebase = always
+	sort = -committerdate
 [pull]
 	rebase = true
 [push]
 	default = current
+	autosetupremote = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -99,3 +107,9 @@
 	autostash = true
 [commit]
 	gpgsign = true
+[column]
+	ui = auto
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
