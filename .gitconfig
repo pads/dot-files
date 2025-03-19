@@ -25,20 +25,20 @@
 	ct = tag -a
 	pt = push --tags
 	drb = push origin --delete
-	fom = fetch origin master
+	fom = fetch origin main
 	po = push origin
-	pom = push origin master
+	pom = push origin main
 	pall = push all --all
 	pu = push upstream
 	pum = pull origin master
-	prum = pull --rebase upstream master
-	pr = pull --rebase
-	ram = rebase -i --autosquash origin/main
+	prum = pull upstream main
+	p = pull
+	rim = rebase -i origin/main
 	rc = rebase --continue
 	ra = rebase --abort
 	rs = rebase --skip
 	fu = fetch upstream
-	mum = merge upstream/master
+	mum = merge upstream/main
 	srh = reset --soft HEAD^
 	hr = reset --hard
 	df = diff
@@ -94,6 +94,7 @@
 [push]
 	default = current
 	autosetupremote = true
+	followTags = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -105,6 +106,7 @@
 [rebase]
 	autosquash = true
 	autostash = true
+	updateRefs = true
 [commit]
 	gpgsign = true
 [column]
@@ -113,3 +115,17 @@
 	sort = version:refname
 [init]
 	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[rerere]
+	enabled = true
+	autoupdate = true
