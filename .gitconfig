@@ -93,7 +93,7 @@
 	rebase = true
 [push]
 	default = current
-	autosetupremote = true
+	autoSetupRemote = true
 	followTags = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
